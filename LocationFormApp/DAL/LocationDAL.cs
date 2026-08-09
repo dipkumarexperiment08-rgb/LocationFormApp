@@ -53,7 +53,7 @@ namespace LocationFormApp.DAL
             return countries;
         }
 
-        // Get all countries for management
+        // Get all countries for manage enable and disable functionality
         public List<Country> GetAllCountries()
         {
             List<Country> countries = new List<Country>();
@@ -93,7 +93,7 @@ namespace LocationFormApp.DAL
         }
 
 
-        // Get only active states for selected country
+        // Get  active states for selected country
         public List<State> GetStatesByCountry(int countryId)
         {
             List<State> states = new List<State>();
@@ -142,7 +142,7 @@ namespace LocationFormApp.DAL
         }
 
 
-        // Get only active cities for selected state
+        // Get  active cities for selected state
         public List<City> GetCitiesByState(int stateId)
         {
             List<City> cities = new List<City>();
@@ -191,7 +191,7 @@ namespace LocationFormApp.DAL
         }
 
 
-        // Save selected Country, State and City
+        // Save Country, State and City selected by the  user
         public void InsertLocation(LocationModel model)
         {
             using (SqlConnection con =
@@ -246,7 +246,7 @@ namespace LocationFormApp.DAL
                 cmd.ExecuteNonQuery();
             }
         }
-        // Get all states for management
+        // Get all states for manage disable and enable functionality
         public List<State> GetAllStates()
         {
             List<State> states = new List<State>();
@@ -282,7 +282,7 @@ namespace LocationFormApp.DAL
         }
 
 
-        // Get all cities for management
+        // Get all cities for manage disable and enable functionality
         public List<City> GetAllCities()
         {
             List<City> cities = new List<City>();
@@ -318,7 +318,7 @@ namespace LocationFormApp.DAL
         }
 
 
-        // Enable / Disable State
+        // Enable and Disable State
         public void UpdateStateStatus(int stateId, bool isActive)
         {
             using (SqlConnection con = new SqlConnection(_connectionString))
@@ -339,7 +339,7 @@ namespace LocationFormApp.DAL
         }
 
 
-        // Enable / Disable City
+        // Enable and Disable City
         public void UpdateCityStatus(int cityId, bool isActive)
         {
             using (SqlConnection con = new SqlConnection(_connectionString))
