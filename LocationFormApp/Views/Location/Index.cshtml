@@ -71,10 +71,7 @@
 
     <h2>Location Form</h2>
 
-
-    <!-- ============================= -->
     <!-- LOCATION FORM -->
-    <!-- ============================= -->
 
     <form method="post" action="/Location/Save">
 
@@ -87,8 +84,8 @@
 
             <select id="country" name="CountryId">
 
-                <option value="">
-                    -- Select Country --
+                <option value="" selected disabled>
+                    Select Country
                 </option>
 
                 @foreach (var country in Model.Countries)
@@ -111,8 +108,8 @@
 
             <select id="state" name="StateId">
 
-                <option value="">
-                    -- Select State --
+                <option value="" selected disabled>
+                    Select State
                 </option>
 
             </select>
@@ -128,8 +125,8 @@
 
             <select id="city" name="CityId">
 
-                <option value="">
-                    -- Select City --
+                <option value="" selected disabled>
+                     Select City
                 </option>
 
             </select>
@@ -146,16 +143,12 @@
 
 
 
-    <!-- ===================================== -->
     <!-- MANAGEMENT -->
-    <!-- ===================================== -->
 
     <div class="management">
 
 
-        <!-- ================================= -->
         <!-- COUNTRIES -->
-        <!-- ================================= -->
 
         <div class="section">
 
@@ -226,9 +219,7 @@
 
 
 
-        <!-- ================================= -->
         <!-- STATES -->
-        <!-- ================================= -->
 
         <div class="section">
 
@@ -298,10 +289,7 @@
         </div>
 
 
-
-        <!-- ================================= -->
         <!-- CITIES -->
-        <!-- ================================= -->
 
         <div class="section">
 
