@@ -1,7 +1,7 @@
-﻿/* =========================================================
+﻿/*
    LocationFormApp - Complete Database Script
    ASP.NET Core MVC + ADO.NET + SQL Server
-   ========================================================= */
+ */
 
 
 -- 1. CREATE DATABASE
@@ -16,7 +16,6 @@ USE LocationDB;
 GO
 
 
--- =========================================================
 -- 2. COUNTRY TABLE
 
 IF OBJECT_ID('Country', 'U') IS NULL
@@ -31,7 +30,6 @@ END
 GO
 
 
--- =========================================================
 -- 3. STATE TABLE
 
 IF OBJECT_ID('State', 'U') IS NULL
@@ -51,7 +49,6 @@ END
 GO
 
 
--- =========================================================
 -- 4. CITY TABLE
 
 IF OBJECT_ID('City', 'U') IS NULL
@@ -71,7 +68,6 @@ END
 GO
 
 
--- =========================================================
 -- 5. USER SELECTION TABLE
 
 IF OBJECT_ID('UserSelection', 'U') IS NULL
@@ -99,7 +95,6 @@ END
 GO
 
 
--- =========================================================
 -- 6. INSERT COUNTRIES
 
 IF NOT EXISTS
@@ -154,7 +149,6 @@ END
 GO
 
 
--- =========================================================
 -- 7. GET COUNTRY IDs
 
 DECLARE @IndiaId INT;
@@ -174,7 +168,6 @@ FROM Country
 WHERE CountryName = 'Canada';
 
 
--- =========================================================
 -- 8. INSERT STATES - INDIA
 
 IF NOT EXISTS
@@ -215,7 +208,6 @@ BEGIN
 END
 
 
--- =========================================================
 -- 9. INSERT STATES - USA
 
 IF NOT EXISTS
@@ -256,7 +248,6 @@ BEGIN
 END
 
 
--- =========================================================
 -- 10. INSERT STATES - CANADA
 
 IF NOT EXISTS
@@ -317,7 +308,6 @@ END
 GO
 
 
--- =========================================================
 -- 11. GET STATE IDs
 
 DECLARE @GujaratId INT;
@@ -393,7 +383,6 @@ WHERE StateName = 'Alberta'
 AND CountryId = @CanadaId;
 
 
--- =========================================================
 -- 12. INSERT CITIES - GUJARAT
 
 IF NOT EXISTS
@@ -434,7 +423,6 @@ BEGIN
 END
 
 
--- =========================================================
 -- 13. INSERT CITIES - MAHARASHTRA
 
 IF NOT EXISTS
@@ -475,7 +463,6 @@ BEGIN
 END
 
 
--- =========================================================
 -- 14. INSERT CITIES - CALIFORNIA
 
 IF NOT EXISTS
@@ -516,7 +503,6 @@ BEGIN
 END
 
 
--- =========================================================
 -- 15. INSERT CITIES - TEXAS
 
 IF NOT EXISTS
@@ -557,7 +543,6 @@ BEGIN
 END
 
 
--- =========================================================
 -- 16. INSERT CITIES - ONTARIO
 
 IF NOT EXISTS
@@ -617,7 +602,6 @@ BEGIN
 END
 
 
--- =========================================================
 -- 17. INSERT CITIES - QUEBEC
 
 IF NOT EXISTS
@@ -658,7 +642,6 @@ BEGIN
 END
 
 
--- =========================================================
 -- 18. INSERT CITIES - ALBERTA
 
 IF NOT EXISTS
@@ -700,7 +683,6 @@ END
 GO
 
 
--- =========================================================
 -- 19. INSERT LOCATION STORED PROCEDURE
 
 CREATE OR ALTER PROCEDURE sp_InsertLocation
@@ -731,7 +713,6 @@ END
 GO
 
 
--- =========================================================
 -- 20. UPDATE COUNTRY STATUS
 
 CREATE OR ALTER PROCEDURE sp_UpdateCountryStatus
@@ -752,7 +733,6 @@ END
 GO
 
 
--- =========================================================
 -- 21. UPDATE STATE STATUS
 
 CREATE OR ALTER PROCEDURE sp_UpdateStateStatus
@@ -773,7 +753,6 @@ END
 GO
 
 
--- =========================================================
 -- 22. UPDATE CITY STATUS
 
 CREATE OR ALTER PROCEDURE sp_UpdateCityStatus
@@ -794,7 +773,6 @@ END
 GO
 
 
--- =========================================================
 -- 23. VERIFY DATA
 
 SELECT * FROM Country;
@@ -807,7 +785,6 @@ SELECT * FROM UserSelection;
 GO
 
 
--- =========================================================
 -- 24. VERIFY STORED PROCEDURES
 
 SELECT
